@@ -1,14 +1,22 @@
 {
-  "name": "ezzi-world",
+  "name": "ezzi-world-root",
   "private": true,
-  "packageManager": "pnpm@9.15.0",
+  "version": "1.0.0",
+
   "engines": {
     "node": ">=20 <21"
   },
+
+  "packageManager": "npm@10.2.4",
+
   "scripts": {
-    "dev": "pnpm -C apps/web dev",
-    "build": "pnpm -C apps/web build",
-    "start": "pnpm -C apps/web start",
-    "test:e2e": "pnpm -C apps/web test:e2e"
+    "build": "npm --prefix apps/web run build",
+    "dev": "npm --prefix apps/web run dev",
+    "start": "npm --prefix apps/web run start"
+  },
+
+  "devDependencies": {
+    "next": "14.2.12"
   }
 }
+
